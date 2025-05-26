@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",                // Compatível com Node 22
+    "module": "NodeNext",              // Suporte a ES Modules
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,           // Facilita uso de CommonJS
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "./dist",                // Saída dos arquivos compilados
+    "rootDir": "./src"                 // Onde estão os arquivos .ts
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
