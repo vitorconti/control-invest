@@ -1,0 +1,37 @@
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: invest_control
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports: 
+      - "5432:5432"
+
+  # backend:
+  #   build: ./backend
+  #   depends_on:
+  #     - db
+  #   environment:
+  #     DB_HOST: db
+  #     DB_USER: postgres
+  #     DB_PASS: postgres
+  #     DB_NAME: invest_control
+  #   ports:
+  #     - "3001:3001"
+  #   volumes:
+  #     - ./backend:/app
+
+  # frontend:
+  #   build: ./frontend
+  #   depends_on:
+  #     - backend
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - ./frontend:/app
+
+volumes:
+  pgdata:
